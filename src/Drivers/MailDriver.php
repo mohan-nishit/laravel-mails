@@ -115,6 +115,13 @@ abstract class MailDriver
         ]);
     }
 
+    public function transientHardBounced(Mail $mail, string $timestamp): void
+    {
+        $mail->update([
+            'hard_bounced_at' => $timestamp,
+        ]);
+    }
+
     public function softBounced(Mail $mail, string $timestamp): void
     {
         $mail->update([

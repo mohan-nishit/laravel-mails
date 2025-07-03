@@ -129,6 +129,7 @@ class PostmarkDriver extends MailDriver implements MailDriverContract
             EventType::COMPLAINED->value => ['RecordType' => 'SpamComplaint'],
             EventType::DELIVERED->value => ['RecordType' => 'Delivery'],
             EventType::HARD_BOUNCED->value => ['RecordType' => 'Bounce', 'Type' => 'HardBounce'],
+            EventType::TRANSIENT_HARD_BOUNCED->value => ['RecordType' => 'Bounce', 'Type' => 'Transient'],
             EventType::OPENED->value => ['RecordType' => 'Open'],
             EventType::SOFT_BOUNCED->value => ['RecordType' => 'Bounce', 'Type' => 'SoftBounce'],
             EventType::UNSUBSCRIBED->value => ['RecordType' => 'SubscriptionChange'],
